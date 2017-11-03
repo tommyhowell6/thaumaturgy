@@ -34,6 +34,7 @@ function mainCtrl ($scope, todoFetcher, $http) {
        data: formData
     }).success(function(data, status, headers, config) {
       console.log("Post worked");
+      location.reload();
     }).error(function(data, status, headers, config) {
       console.log("Post failed");
     });
