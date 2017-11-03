@@ -40,7 +40,8 @@ function mainCtrl ($scope, todoFetcher, $http) {
   }
   $scope.onCompleteTask = function(item) {
     console.log('running onCompleteTask function');
-    console.log(item)//delete the item from db. 
+    document.getElementById('item.title').style('backgroundColor: green');
+    console.log(item);//delete the item from db. 
     $http({
       url: 'todo',
       method: "DELETE",
