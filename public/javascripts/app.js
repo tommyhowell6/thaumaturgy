@@ -38,4 +38,16 @@ function mainCtrl ($scope, todoFetcher, $http) {
       console.log("Post failed");
     });
   }
+  $scope.onCompleteTask = function(item) {
+    //delete the item from db. 
+    // $http({
+    //   url:item,
+    //   method: "DELETE",
+    //   data: formData
+    // }).success(function(data, status, headers, config) {
+    //   console.log("Delete worked");
+    // }).error(function(data, status, headers, config) {
+    //   console.log("Delete failed");
+    // });
+  }
 }
