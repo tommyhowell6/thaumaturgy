@@ -14,7 +14,7 @@ router.get('/todo', function(req, res) {
 router.post('/todo', function(req, res) {
     console.log("In Todo post");
     console.log(req.body);
-    todoList.push(req.body);
+    todo.push(req.body);
     res.end('{"success" : "Updated Successfully", "status" : 200}');
 });
 
