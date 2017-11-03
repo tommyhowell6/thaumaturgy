@@ -3,52 +3,33 @@ var router = express.Router();
 var request = require('request')
 
 /* GET home page. */
-
 router.get('/', function(req, res) {
   res.sendFile('index.html', { root: 'public' });
 });
 
-router.get('/pokemon', function(req, res) {
-  console.log("In Pokemon");
-  res.send(pokemon);
+router.get('/todo', function(req, res) {
+  console.log("In Todo List");
+  res.send(todo);
 });
 router.post('/pokemon', function(req, res) {
-    console.log("In Pokemon Post");
+    console.log("In Todo post");
     console.log(req.body);
     pokemon.push(req.body);
     res.end('{"success" : "Updated Successfully", "status" : 200}');
-}); 
-var politics = "https://zlzlap7j50.execute-api.us-east-1.amazonaws.com/prod";
-router.get('/politics', function(req,res) {
-  console.log("In politics");
-  request(politics).pipe(res);
 });
 
 module.exports = router;
-var pokemon = [
+var todo = [
   {
-    name: 'Pikachu',
-    avatarUrl: 'http://rs795.pbsrc.com/albums/yy232/PixKaruumi/Pokemon%20Pixels/Pikachu_Icon__free__by_Aminako.gif~c200'
+    title: 'Rake Leaves',
+    priority: 3
   },
   {
-    name: 'Charmander',
-    avatarUrl: 'http://24.media.tumblr.com/tumblr_ma0tijLFPg1rfjowdo1_500.gif'
-
+    name: 'Buy Milk',
+    priority: 1
   },
   {
-    name: 'Mew',
-    avatarUrl: 'http://media3.giphy.com/media/J5JrPT8r1xGda/giphy.gif'
-  },
-  {
-    name: 'Cubone',
-    avatarUrl: 'http://rs1169.pbsrc.com/albums/r511/nthndo/tumblr_ljsx6dPMNm1qii50go1_400.gif~c200'
-  },
-  {
-    name: 'Cleffa',
-    avatarUrl: 'http://media1.giphy.com/media/pTh2K2xTJ1nag/giphy.gif'
-  },
-  {
-    name: 'Gengar',
-    avatarUrl: 'https://s-media-cache-ak0.pinimg.com/originals/7e/3b/67/7e3b67c53469cc4302035be70a7f2d60.gif'
+    name: 'Use Todo List',
+    priority: 2
   }
 ];

@@ -13,9 +13,19 @@
 </head>
 <body>
 
-  <div id='app' ng-app='app' ng-controller='mainCtrl'>
+  <div id='app' ng-app='Thaumaturgy' ng-controller='mainCtrl'>
 
-    <ng-view></ng-view>
+    <div class="home-content">
+        <h1 class="page-header">Alchemy</h1>
+        <!-- underline image -->
+        <h4 class="sub-header">Be one with the elements</h4>
+        <div class="username-input">
+            <label for="username">Enter your name</label>
+            <input type="text" name="username">
+            <button ng-click="onStartGame()">Start your journey</button>
+        </div>
+        <a href="#game"><button class="button-link">Route to Game</button></a>
+    </div>
 
   </div>
 
