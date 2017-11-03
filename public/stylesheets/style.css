@@ -20,9 +20,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .home-content {
-    background: url(./assets/landscape.jpg) no-repeat center center fixed;
+    background: url(./landscape.jpg) no-repeat center center fixed;
     background-size: cover;
-    color: whitesmoke;
+    color: black;
 }
 
 .page-header {
