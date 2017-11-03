@@ -11,7 +11,7 @@ router.get('/todo', function(req, res) {
   console.log("In Todo List");
   res.send(todo);
 });
-router.post('/pokemon', function(req, res) {
+router.post('/todo', function(req, res) {
     console.log("In Todo post");
     console.log(req.body);
     pokemon.push(req.body);

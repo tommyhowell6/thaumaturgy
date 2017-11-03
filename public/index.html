@@ -11,21 +11,32 @@
 </head>
 <body>
 
+  <body>
+
   <div id='app' ng-app='app' ng-controller='mainCtrl'>
 
-    <div class="home-content">
-        <h1 class="page-header">Alchemy</h1>
-        <!-- underline image -->
-        <h4 class="sub-header">Be one with the elements</h4>
-        <div class="username-input">
-            <label for="username">Enter your name</label>
-            <input type="text" name="username">
-            <button ng-click="onStartGame()">Start your journey</button>
-        </div>
-        <a href="#game"><button class="button-link">Route to Game</button></a>
+    <div ng-if='!todoList.length' class='no-pokemon center stretch'>
+      <h1 class='h1'>
+        Set up your endpoint at `/todo` to get this view working
+      </h1>
     </div>
 
-  </div>
+    <ul ng-if='todo.length' class='list center stretch'>
+      <li ng-repeat='item in todo' class='todo'>
+        <h1>{{ item.title }}</h1>
+        <h2>{{item.priority}}</h2>
+      </li>
+    </ul>
+<h1> Enter A New todo item</h1>
+<form id="newTodo" ng-submit="addItem()">
+  Title: <input type="text" ng-model="title" value=""><br>
+  priority: <input type="number" ng-model="priority" value=""><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+
+</body>
+
 
 </body>
 </html>
