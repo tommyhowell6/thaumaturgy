@@ -60,3 +60,23 @@ input {
   border-bottom: 0;
 }
 
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.item-title {
+  display: flex;
+  flex-wrap: wrap;
+  width: 120px;
+}
+
+.complete-button {
+  align-self: center;
+  height: 25px;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 4px;
+}

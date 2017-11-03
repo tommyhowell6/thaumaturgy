@@ -39,15 +39,16 @@ function mainCtrl ($scope, todoFetcher, $http) {
     });
   }
   $scope.onCompleteTask = function(item) {
-    //delete the item from db. 
-    // $http({
-    //   url:item,
-    //   method: "DELETE",
-    //   data: formData
-    // }).success(function(data, status, headers, config) {
-    //   console.log("Delete worked");
-    // }).error(function(data, status, headers, config) {
-    //   console.log("Delete failed");
-    // });
+    console.log('running onCompleteTask function');
+    console.log(item)//delete the item from db. 
+    $http({
+      url: 'todo',
+      method: "DELETE",
+      data: item.title
+    }).success(function(data, status, headers, config) {
+      console.log("Delete worked");
+    }).error(function(data, status, headers, config) {
+      console.log("Delete failed");
+    });
   }
 }

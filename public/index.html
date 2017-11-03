@@ -32,10 +32,10 @@
   
       <div class="list-container">
         <ul ng-if='todoList.length'>
-          <li ng-repeat='item in todoList'>
-            <h4>{{item.title}}</h4>
+          <li ng-repeat='item in todoList' class="task">
+            <h4 class="item-title">{{item.title}}</h4>
             <h5>{{item.priority}}</h5>
-            <button ng-click="onCompleteTask(item)"></button>
+            <button ng-click="onCompleteTask(item)" class="complete-button">Done</button>
           </li>
         </ul>
       </div>

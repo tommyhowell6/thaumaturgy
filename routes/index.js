@@ -15,10 +15,16 @@ router.post('/todo', function(req, res) {
     console.log("In Todo post");
     console.log(req.body);
     todo.push(req.body);
-    res.end('{"success" : "Updated Successfully", "status" : 200}');
+    res.send('{"success" : "Updated Successfully", "status" : 200}');
+});
+router.delete('/todo', function(req,res) {
+    console.log(req.body);
+    todo.delete(req.body);
+    res.send('{"success : "Deleted Successfuly", "status" : 200}');
 });
 
 module.exports = router;
+
 var todo = [
   {
     title: 'Rake Leaves',
