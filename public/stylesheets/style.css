@@ -1,50 +1,55 @@
-
-html, body, #app {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: helvetica;
+body{
+  font-family: 'IM Fell DW Pica', serif;
 }
 
-div, ul {
-  margin: 0;
-  padding: 0;
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Seaweed Script', cursive;
 }
 
-.stretch {
-  width: 100%;
-  height: 100%;
-}
-
-.no-pokemon {
-  background-color: #ED5565;
-}
-
-.center {
+.rune-list{
   display: flex;
-  align-items: center;
+  flex-direction: row;
+}
+
+.rune {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.home-content {
+    background: url(./assets/landscape.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+.page-header {
+  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  margin-right: 300px;
+  margin-top: 150px;
 }
 
-.h1 {
-  margin: 0;
-  color: white;
+.sub-header {
+  display: flex;
+  justify-content: center;
+  margin-right: 90px;
 }
 
-.pokemon {
-  padding: 20px;
+.username-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 110px;
+  margin-top: 100px;
 }
 
-.avatar {
-  width: 100px;
-  height: 100px;
-}
-
-.list {
-  text-align: center;
-  list-style: none;
-  background-color: #4FC1E9;
-  color: white;
+input {
+  /* This should have a grey somewhat transparent
+  field and white text. Or just an underline
+  with an x before it */
 }
