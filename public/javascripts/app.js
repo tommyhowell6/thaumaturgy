@@ -27,7 +27,7 @@ function mainCtrl ($scope, todoFetcher, $http) {
   $scope.addItem = function() {
     var formData = {title:$scope.title,priotiy:$scope.priority};
     console.log(formData);
-    var itemURL = 'item';
+    var itemURL = 'todo';
     $http({
        url: itemURL,
        method: "POST",

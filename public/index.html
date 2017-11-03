@@ -21,9 +21,9 @@
       </h1>
     </div>
 
-    <ul ng-if='todo.length' class='list center stretch'>
-      <li ng-repeat='item in todo' class='todo'>
-        <h1>{{ item.title }}</h1>
+    <ul ng-if='todoList.length' class='list center stretch'>
+      <li ng-repeat='item in todoList' class='todo'>
+        <h1>{{item.title}}</h1>
         <h2>{{item.priority}}</h2>
       </li>
     </ul>

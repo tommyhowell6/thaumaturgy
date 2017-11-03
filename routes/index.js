@@ -14,7 +14,7 @@ router.get('/todo', function(req, res) {
 router.post('/todo', function(req, res) {
     console.log("In Todo post");
     console.log(req.body);
-    pokemon.push(req.body);
+    todoList.push(req.body);
     res.end('{"success" : "Updated Successfully", "status" : 200}');
 });
 
@@ -25,11 +25,11 @@ var todo = [
     priority: 3
   },
   {
-    name: 'Buy Milk',
+    title: 'Buy Milk',
     priority: 1
   },
   {
-    name: 'Use Todo List',
+    title: 'Use Todo List',
     priority: 2
   }
 ];
